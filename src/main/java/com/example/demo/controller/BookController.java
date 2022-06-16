@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import static com.example.demo.constant.VerifyRegexConst.PATTERN_BOOK_NAME;
+import static com.example.demo.constant.VerifyRegexConst.PATTERN_USER_CODE;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Base64;
@@ -63,7 +64,7 @@ public class BookController {
 	}
 
 	@GetMapping(path = "/{bookName}")
-	public BookDTO getBookByName(@PathVariable("bookName") String bookName) {
+	public BookDTO getBookByName(@Validator(pattern = PATTERN_BOOK_NAME) @PathVariable("bookName") String bookName) {
 		System.out.println("name=" + bookName);
 		return bookService.getBookByName(bookName);
 	}

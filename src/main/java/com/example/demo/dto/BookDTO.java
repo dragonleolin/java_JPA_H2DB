@@ -24,11 +24,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class BookDTO {
 
-    //@Validator(notNull = false, pattern = PATTERN_BOOK_NAME)
+    @Validator(notNull = false, pattern = PATTERN_BOOK_NAME)
     private String name;
-    //@Validator(notNull = false, pattern = PATTERN_BOOK_AUTHOR)
+    @Validator(notNull = false, pattern = PATTERN_BOOK_AUTHOR)
     private String author;
-    //@Validator(notNull = false, pattern = PATTERN_BOOK_PUBLICATIONDATE)
+    @Validator(notNull = false, pattern = PATTERN_BOOK_PUBLICATIONDATE)
     private String publicationDate;
 
     public static BookDTO createByBookPO(BookPO po) {

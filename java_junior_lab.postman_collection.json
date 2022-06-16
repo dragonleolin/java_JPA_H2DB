@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "d6454572-31f0-4967-b4f2-b43586d1a3ae",
+		"name": "java_junior_lab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "demo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "demo"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"userCode\": \"admin\",\r\n        \"pcode\": \"21983358FA751898D41BDC820C9A97DF06D6D1410EFB7079DD6DB838B0BD79F8F6D03DA02C814A6C48B9B0BB62652584742295FDCA6DB99DAC46AAE242DC00FF585284DFC0326148A0A6AA31E3D096A74D375A7B3BC39E9D34D7397D2741C63A1552B9BCAD99471EA392C594012349A0C523EB87C9065BBB3F00302F5212C397\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查詢所有書籍",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查詢所有書籍排序",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/book?order=name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "以書名查詢書籍",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/book/按下暫停鍵也沒關係：在憂鬱症中掙扎了一年，我學到的事",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"按下暫停鍵也沒關係：在憂鬱症中掙扎了一年，我學到的事"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增書籍",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Humility Is the New Smart\",\r\n        \"author\": \"Hess Edward\",\r\n        \"publicationDate\": \"20220616\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新書籍",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"按下暫停鍵也沒關係：在憂鬱症中掙扎了一年，我學到的事\",\r\n    \"author\": \"阿滴（都省瑞）424525424254\",\r\n    \"publicationDate\": \"20220601\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/book/按下暫停鍵也沒關係：在憂鬱症中掙扎了一年，我學到的事",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"按下暫停鍵也沒關係：在憂鬱症中掙扎了一年，我學到的事"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除書籍",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/book/按下暫停鍵也沒關係：在憂鬱症中掙扎了一年，我學到的事",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"按下暫停鍵也沒關係：在憂鬱症中掙扎了一年，我學到的事"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
