@@ -24,10 +24,13 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class BookDTO {
 
+	//7-2. 使用 @Validator 給定正規表示式來檢核 Book API request 中所有書名「只能是英數字」、「長度最大為 Table 定義之最大長度」
     @Validator(notNull = false, pattern = PATTERN_BOOK_NAME)
     private String name;
+    //7-3. 使用 @Validator 給定正規表示式來檢核 Book API request 中所有作者「只能是英文字」、「長度最大為 Table 定義之最大長度」
     @Validator(notNull = false, pattern = PATTERN_BOOK_AUTHOR)
     private String author;
+    //7-4. 使用 @Validator 給定參數 validator 來檢核 Book API request 中所有出版日期「符合規格中定義之格式」
     @Validator(notNull = false, pattern = PATTERN_BOOK_PUBLICATIONDATE)
     private String publicationDate;
 

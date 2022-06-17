@@ -21,6 +21,7 @@ import static com.example.demo.constant.AOPConst.POINTCUT_SERVICELAYER;
 @Component
 @Aspect
 @Order(LOGGER_ORDER)
+//4. AOP (Aspect-Oriented Programming)
 public class LoggerAspect {
     private static final Logger LOGGER = LoggerFactory.getLogger(LoggerAspect.class);
 
